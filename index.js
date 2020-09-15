@@ -11,19 +11,20 @@ class Formatter {
   static titleize(string){
     let lowerCasedWords = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     let stringArray = string.split(' ')
-    let newStringArray = [stringArray[0].charAt(0).toUpperCase() + stringArray[0].slice(1)]
+    let result = []
+    result = [stringArray[0].charAt(0).toUpperCase() + stringArray[0].slice(1)]
     //=>["In"]
     stringArray = stringArray.slice(1)
     //=> ["the", "night", "kitchen"]
     stringArray.forEach( word =>  {
       if (lowerCasedWords.includes(word)) {
-        newStringArray.push(word)
+        result.push(word)
       }
       else {
-        newStringArray.push(word.charAt(0).toUpperCase() + word.slice(1))
+        result.push(this.capitalize(word))
       }
     })
-    return newStringArray.join(' ')
+    return result.join(' ')
   }
   
 }
