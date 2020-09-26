@@ -12,11 +12,11 @@ class Formatter {
 
   static titleize(str){
     let arr = str.split()
-    let newArr = arr.map(this.updateWord)
+    let newArr = arr.map(updateWord)
     return newArr.join(" ")
   }
 
-  updateWord(word){
+  static updateWord(word){
     let lowerCaseWord = word.toLowerCase()
     switch(lowerCaseWord){
       case "the":
