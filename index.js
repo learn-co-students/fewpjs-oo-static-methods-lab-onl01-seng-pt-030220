@@ -12,8 +12,10 @@ class Formatter {
 
   static titleize(str){
     let arr = str.split()
-    let newArr = arr.map(updateWord)
-    return newArr.join(" ")
+    let newArr = arr.map(this.updateWord)
+    return newArr
+    //newArr[0].capitalize
+    //return newArr.join(" ")
   }
 
   static updateWord(word){
@@ -29,10 +31,10 @@ class Formatter {
       case "at":
       case "by":
       case "from":
-        return word[0].toUpperCase() + word.slice(1)
+        return lowerCaseWord
         break
       default: 
-        return word.toUpperCase()
+        return lowerCaseWord[0].toUpperCase() + lowerCaseWord.slice(1)
     }
   }
 
