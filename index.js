@@ -10,12 +10,13 @@ class Formatter {
     //return str.replace(/[^A-Za-z0-9-']+/g, '')
   }
 
-  static titleize(str){
-    let arr = str.split()
+   static titleize(str){
+    let arr = str.split(" ")
     let newArr = arr.map(this.updateWord)
-    return newArr
-    //newArr[0].capitalize
-    //return newArr.join(" ")
+    console.log(newArr)
+    //newArr[0].toUpperCase()
+    return  newArr[0][0].toUpperCase()+ newArr[0].slice(1) +" "+ newArr.slice(1).join(" ")
+    //sentence = sentence[0]
   }
 
   static updateWord(word){
@@ -37,8 +38,5 @@ class Formatter {
         return lowerCaseWord[0].toUpperCase() + lowerCaseWord.slice(1)
     }
   }
-
-
-
     
 }
