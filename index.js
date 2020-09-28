@@ -29,18 +29,6 @@ class Formatter {
       goodArray.push(newArray[i])
       }
     }
-    // newArray.forEach(word => {
-    //   if (!makeArray.include(word)){
-    //     word.charAt(0).toUpperCase()+ word.slice(1)
-    //     goodArray.push(word)
-    //     return goodArray
-    //   }
-    // })
-    // const amendedArray = goodArray.map(word => {
-    // return word.charAt(0).toUpperCase()+ word.slice(1)
-    // })
-    // const final = amendedArray.join(" ")
-    // return final
     return goodArray.join(" ")
 
   }
