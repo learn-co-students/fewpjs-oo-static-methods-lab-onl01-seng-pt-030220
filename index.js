@@ -1,17 +1,17 @@
 class Formatter {
 
-  static capitalize(string){
-    return string.charAt(0).toUpperCase() + string.slice(1)
+  static capitalize(str){
+    return str.charAt(0).toUpperCase() + str.slice(1)
   }
 
-  static sanitize(string){
-    return string.replace(/[^ A-Za-z0-9-']+/g, '')
+  static sanitize(str){
+    return str.replace(/[^ A-Za-z0-9-']+/g, '')
   }
 
-  static titleize(string){
+  static titleize(str){
     let arr = ['the','a','an','but','of','and','for','at','by','from']
 
-    let newStr = string.replace(string[0],string[0].toUpperCase())
+    let newStr = str.replace(str[0],str[0].toUpperCase())
 
     return newStr.split(' ').map(word=>{
       if (!arr.includes(word)){
