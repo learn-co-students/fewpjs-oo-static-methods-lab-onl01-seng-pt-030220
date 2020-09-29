@@ -9,10 +9,8 @@ class Formatter {
   }
 
   static titleize(str){
+    // SECOND VERSION:
     let arrayOfEx = ['the','a','an','but','of','and','for','at','by','from']
-    // let newStr = str.replace(str[0],str[0].toUpperCase())
-    // first letter always caps
-
     let result = [];
     let wordsArray = str.split(' ')
 
@@ -28,8 +26,13 @@ class Formatter {
       }
       }
       return result.join(' ')
-    }
 
+
+
+    // FIRST VERSION:
+    // first letter always caps:
+    // let newStr = str.replace(str[0],str[0].toUpperCase())
+    
     // grap string, split into each word, check if words are in your array, if not then caps them and if yes then return as is.
     // return newStr.split(' ').map(word=>{
     //   if (!arr.includes(word)){
@@ -38,7 +41,8 @@ class Formatter {
     //     return word
     //   }
     // }).join(' ')
-  // }
+    }
+    
 
 }
 
